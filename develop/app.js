@@ -7,6 +7,7 @@ const fs = require("fs");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
+const outputCSSPath = path.join(OUTPUT_DIR, "style.css");
 
 const render = require("./lib/htmlRenderer");
 const Employee = require("./lib/Employee");
@@ -178,10 +179,15 @@ function createWebPage() {
     // returned from the `render` function. Now write it to a file named `team.html` in the
     // `output` folder. You can use the variable `outputPath` above target this location.
     // Hint: you may need to check if the `output` folder exists and create it if it does not.
-    // if (!fs.exists(OUTPUT_DIR)) {
-    //     fs.mkdir(OUTPUT_DIR);
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR);
+    }
+
+    // if (!fs.existsSync(outputCSSPath)) {
+        fs.copyFileSync("./templates/style.css", outputCSSPath);
     // }
-    fs.writeFile(outputPath, webPage, err => {
+
+    fs.writeFileSync(outputPath, webPage, err => {
         if (err) {
             console.log(err);
         }
