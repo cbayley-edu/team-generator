@@ -23,7 +23,10 @@ If you plan to push the repo back to your GitHub repo, be sure to add a .gitigno
 
 ## Usage 
 
-#### Access a step-by-step video here: tbd
+#### Access a step-by-step video here: 
+Part 1: https://drive.google.com/file/d/1ISPw0vlaidG4_efbhJo-yEElM3zgiJv8/view
+
+Part 2: https://drive.google.com/file/d/1BSE-oWT6-7ocCTrMw669R761Dax10Qnr/view
 #### Repo link: https://github.com/cbayley-edu/team-generator
 
 This application contains tests. Access the test folder and type run npm test in the terminal.
