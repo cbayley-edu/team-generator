@@ -164,7 +164,7 @@ function initEmployee() {
           })
     } else {
         //console.log(employees);
-        // once manager is finished answer questions, write to team.html file to render web page
+        // once manager is finished answering questions, write to team.html file to render web page
         createWebPage();
     }
 }
